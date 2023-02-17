@@ -3,15 +3,25 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+arr.sum 
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  arr.max(2).sum
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  if(arr.length == 1)
+    return false
+  end
+  for i in arr do
+    for j in arr do
+      if((i + j) == n)
+        return true
+      end
+    end
+  end
+  return false
 end
 
 # Part 2
