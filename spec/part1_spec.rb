@@ -6,14 +6,14 @@ describe 'Ruby intro part 1' do
   describe '#sum' do
 
     it 'returns correct sum [1 point]', points: 1 do
-      expect(sum([1, 2, 3, 4, 5])).to be_a_kind_of Integer
-      expect(sum([1, 2, 3, 4, 5])).to eq(15)
-      expect(sum([1, 2, 3, 4, -5])).to eq(5)
-      expect(sum([1, 2, 3, 4, -5, 5, -100])).to eq(-90)
+      expect(sum([1, 2, 3, 4, 5])).to be_a_kind_of Integer #Makes sure it's an int
+      expect(sum([1, 2, 3, 4, 5])).to eq(15) #Check case to see if it adds corrrectly
+      expect(sum([1, 2, 3, 4, -5])).to eq(5) #Check case to see if it adds corrrectly
+      expect(sum([1, 2, 3, 4, -5, 5, -100])).to eq(-90) #Check case to see if it adds corrrectly
     end
 
     it 'works on the empty array [2 points]', points: 2 do
-      expect { sum([]) }.not_to raise_error
+      expect { sum([]) }.not_to raise_error #checks if it works on an empty array
       expect(sum([])).to be_zero
     end
   end
