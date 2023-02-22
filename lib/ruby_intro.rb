@@ -38,7 +38,13 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if s.nil?
+    return false
+  end
+  if (s % 4) == 0
+    return true
+  end
+  return false
 end
 
 # Part 3
