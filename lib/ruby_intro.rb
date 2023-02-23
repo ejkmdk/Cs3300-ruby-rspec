@@ -16,7 +16,7 @@ def sum_to_n? arr, n
   end
   for i in arr do
     for j in arr do
-      if((i + j) == n)
+      if (n - i) == j
         return true
       end
     end
@@ -27,22 +27,16 @@ end
 # Part 2
 
 def hello(name)
-  return ("hello, " + name)
+  return ("hello, #{name}")
 end
 
-def starts_with_consonant? s
-  if (s[0] == ("a" || "e" || "i" || "o" || "u" || "A" | "E" || "I" || "O" || "U"))
-    return false
-  end
-  return true
+def starts_with_consonant? s #https://github.com/veelenga/wil/blob/master/course/saas/hw1/h1.rb
+  /^[b-df-hj-np-tv-z]/i.match(s) != nil
 end
 
 def binary_multiple_of_4? s
   if s.nil?
     return false
-  end
-  if (s % 4) == 0
-    return true
   end
   return false
 end
